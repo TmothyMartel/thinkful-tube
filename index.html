@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Thinkful youtube api challenge</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<header class="headline" role="banner">
+		<h1>Thinkful Tube</h1>
+	</header>
+	<main class="container" role="main">
+		<section class="search-form" role="region">
+			<form id="js-search">
+				<label>Search for a video! </label>
+				<input type="text" name="search" placeholder="ex;cool video" class="js-query"> 
+				<input type="submit" name="search" value="search" class="btn">
+			</form>
+		</section>
+		<section role="region" class="results"></section>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
