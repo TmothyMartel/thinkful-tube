@@ -18,17 +18,17 @@ function getYouTubeData(searchTerm, callback) {
 function resultsRender(result) {
 	return `
 		<ul class="video-list clearfix">
-				<li class="video">
+			<li class="video">
 				<div class="col-1">
 					<a class="thumbnail" href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank">
-						<img src="${result.snippet.thumbnails.medium.url}">
+						<img src="${result.snippet.thumbnails.medium.url}" alt="thumbnail of video">
 					</a>
-					</div>
-					<div class="col-2">
+				</div>
+				<div class="col-2">
 					<h2 class="title">${result.snippet.title}</h2>
 					<p class="description">${result.snippet.description}</p>
-					</div>
-				</li>
+				</div>
+			</li>
 			
 		</ul>
 	`
@@ -40,7 +40,7 @@ function displaySearchData(data) {
     console.log(item);
     resultsRender(item);
   });
-  $('.results').html(results);
+  $('.results').prop('hidden', false).html(results);
 }
 
 //user enters search parameters and submits
