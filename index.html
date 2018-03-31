@@ -13,12 +13,12 @@
 	<main class="container" role="main">
 		<section class="search-form" role="region">
 			<form id="js-search">
-				<label>Search for a video! </label>
-				<input type="text" name="search" placeholder="ex;cool video" class="js-query"> 
+				<label for="search-bar">Search for a video! </label>
+				<input type="text" name="search" id="search-bar" placeholder="ex;cool video" class="js-query" required> 
 				<input type="submit" name="search" value="search" class="btn">
 			</form>
 		</section>
-		<section role="region" class="results"></section>
+		<section role="region" class="results" aria-live="assertive" hidden></section>
 	</main>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="index.js"></script>
